@@ -8,6 +8,9 @@
         <!-- style.css linking here -->
         <link rel="stylesheet" href="css/style.css">
 
+        <!-- animate.css linking here -->
+        <link rel="stylesheet" href="css/animate.css">
+
         <!-- bootstrap.min.css linking here -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -19,7 +22,7 @@
     </head>
     <body>
         <!-- header start -->
-        <header class="header-section">
+        <header class="header-section" id="top-scroll">
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -48,7 +51,7 @@
         <!-- banner-section start -->
         <section class="banner-section">
             <div class="container">
-                <div class="row">
+                <div class="row section--green wow slideInLeft" data-wow-duration="2s">
                     <h3>Are You Hungry?</h3>
                     <h2>I'm hungry !</h2>
                     <h6>Let start to order food now</h6>
@@ -110,7 +113,7 @@
         <section class="events-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 wow fadeInDown" data-wow-delay="1s">
                         <h6>Discover</h6>
                         <h3>Upcoming Events</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse<br> ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
@@ -118,13 +121,13 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-5">
-                        <div class="test">
+                        <div class="test section--blue wow bounceInLeft" data-wow-offset="200">
                             <p>Try it today</p>
                             <h1>Most <br>Popular</h1>
                         </div>
                     </div>
                     <div class="col-lg-7">                       
-                            <div class="try">
+                            <div class="try section--green wow slideInLeft" data-wow-duration="2s">
                                 <p>Try it today</p>
                                 <h1>More fun<br>more taste</h1>
                             </div>
@@ -135,6 +138,35 @@
             </div>
         </section>
         <!-- events-section end -->
+        <!-- fun-section -->
+        <section class="fun-fact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="inner-fun">
+                            <i class="fa fa-facebook"></i>
+                            <h1 class="tonmoy"></h1>
+                            <h4>follower</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="inner-fun">
+                            <i class="fa fa-coffee"></i>
+                            <h1 class="roben"></h1>
+                            <h4>order</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="inner-fun">
+                            <i class="fa fa-clock-o"></i>
+                            <h1 class="rebeiro"></h1>
+                            <h4>working hours</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- fun-end -->
         <!-- BOOK YOUR TABLE  -->
     <div class="container-fluid pb-5">
         <div class="book">
@@ -207,12 +239,52 @@
                         </div>
                       </div>
                   </div>
-                </div>  
-        </div>
+                </div> 
+                <a href="#top-scroll" class="btn btn-info"><i class="fa fa-angle-up"></i></a> 
+             </div>
     </footer>
     <!-- footer end -->
         <!-- bootstrap.bundle.min.js linking here -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/wow.min.js"></script>
+                  <script>
+
+                    jQuery(function($) {
+                        $(document).ready(function(){
+                            //wow initilize
+                  new WOW().init();
+              });
+            });
+                  </script>
+         <script src="js/animationCounter.js"></script>
+         <script>
+            jQuery(function($) {
+                        $(document).ready(function(){
+                            
+            $('.tonmoy').animationCounter({
+          start: 0,
+          step: 69,
+          end:1900,
+          delay:400
+        });
+             $('.roben').animationCounter({
+          start: 0,
+          step: 119,
+          end:2200,
+          delay:500
+        });
+             $('.rebeiro').animationCounter({
+          start: 0,
+          step: 219,
+          end:4380,
+          delay:600
+        });
+              });
+            });
+              
+         </script>
     </body>
 </body>
 </html>
